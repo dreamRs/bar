@@ -1,0 +1,20 @@
+Package: bar
+Title: Create Interactive Proportions Chart with the JavaScript 'proportions-chart' Library
+Description: Provides an 'htmlwidgets' interface to 'proportions-chart.js'. 
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Victor",
+             family = "Perrier",
+             role = c("aut", "cre"),
+             email = "victor.perrier@dreamrs.fr"),
+      person(given = "Fanny",
+             family = "Meyer",
+             role = "aut"),
+      person("Vasco", "Asturiano", role = "cph", comment = "proportions-chart library"))
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    htmlwidgets
