@@ -16,7 +16,7 @@ bar <- function(data,
 
   if (is.data.frame(data)) {
     data <- apply(
-      X = installed,
+      X = data,
       MARGIN = 1,
       FUN = function(x) {
         list(name = x[[1]], value = x[[2]])
