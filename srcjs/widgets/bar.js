@@ -10,26 +10,25 @@ HTMLWidgets.widget({
 
   factory: function(el, width, height) {
 
-    var bar;
+    const barChart = ProportionsChart();
 
     return {
 
       renderValue: function(x) {
 
-        bar = ProportionsChart()
+        barChart(el)
           .width(width)
           .height(height)
           .data(x.data)
           .color(function(d) {
             return x.colors[d.name];
-          })
-          (document.getElementById(el.id));
+          });
 
       },
 
       resize: function(width, height) {
 
-        bar
+        barChart
           .width(width)
           .height(height);
 
