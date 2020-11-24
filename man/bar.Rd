@@ -19,3 +19,12 @@ or a \code{data.frame} with labels in first column and values in second.}
 \description{
 Create a proportion chart
 }
+\examples{
+bar::bar(
+  data = list(
+    list(name = "A", value = 123),
+    list(name = "B", value = 456)
+  ),
+  colors = list(A = "firebrick", B = "steelblue")
+)
+}

@@ -9,6 +9,15 @@
 #' @importFrom htmlwidgets createWidget sizingPolicy
 #'
 #' @export
+#'
+#' @examples
+#' bar::bar(
+#'   data = list(
+#'     list(name = "A", value = 123),
+#'     list(name = "B", value = 456)
+#'   ),
+#'   colors = list(A = "firebrick", B = "steelblue")
+#' )
 bar <- function(data,
                 colors,
                 width = NULL, height = NULL,
