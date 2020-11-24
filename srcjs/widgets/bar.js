@@ -22,6 +22,11 @@ HTMLWidgets.widget({
           .data(x.data)
           .color(function(d) {
             return x.colors[d.name];
+          })
+          .onClick(function(value) {
+            if (HTMLWidgets.shinyMode) {
+              Shiny.setInputValue(el.id + "_click", value.name);
+            }
           });
 
       },
