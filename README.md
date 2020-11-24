@@ -18,7 +18,7 @@ devtools::install_github("dreamRs/bar")
 
 ## Example
 
-Installed capacities to produce energy in France:
+Installed capacities to produce energy in France (source [eco2mix](https://www.rte-france.com/eco2mix/les-chiffres-cles-de-lelectricite)):
 
 ![](man/figures/installed-capacities.png)
 
@@ -27,7 +27,8 @@ Code:
 ```r
 library(bar)
 
-# Installed capacities by sectors in France (https://www.rte-france.com/eco2mix/les-chiffres-cles-de-lelectricite)
+# Installed capacities by sectors in France 
+# source: https://www.rte-france.com/eco2mix/les-chiffres-cles-de-lelectricite
 installed <- read.table(
   text = "Bioenergies,2119
           Fuel oil,2892
