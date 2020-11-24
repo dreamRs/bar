@@ -6,7 +6,7 @@
 #' @param width,height Width and height for the chart.
 #' @param elementId Explicit ID for the widget.
 #'
-#' @import htmlwidgets
+#' @importFrom htmlwidgets createWidget sizingPolicy
 #'
 #' @export
 bar <- function(data,
@@ -31,13 +31,14 @@ bar <- function(data,
   )
 
   # create widget
-  htmlwidgets::createWidget(
+  createWidget(
     name = "bar",
     x = x,
     width = width,
     height = height,
     package = "bar",
-    elementId = elementId
+    elementId = elementId,
+    sizingPolicy = sizingPolicy(browser.fill = TRUE)
   )
 }
 
@@ -58,13 +59,15 @@ bar <- function(data,
 #' @name bar-shiny
 #'
 #' @export
+#' @importFrom htmlwidgets shinyWidgetOutput
 barOutput <- function(outputId, width = "100%", height = "200px"){
-  htmlwidgets::shinyWidgetOutput(outputId, "bar", width, height, package = "bar")
+  shinyWidgetOutput(outputId, "bar", width, height, package = "bar")
 }
 
 #' @rdname bar-shiny
 #' @export
+#' @importFrom htmlwidgets shinyRenderWidget
 renderBar <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
-  htmlwidgets::shinyRenderWidget(expr, barOutput, env, quoted = TRUE)
+  shinyRenderWidget(expr, barOutput, env, quoted = TRUE)
 }

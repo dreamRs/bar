@@ -3,4 +3,7 @@
 export(bar)
 export(barOutput)
 export(renderBar)
-import(htmlwidgets)
+importFrom(htmlwidgets,createWidget)
+importFrom(htmlwidgets,shinyRenderWidget)
+importFrom(htmlwidgets,shinyWidgetOutput)
+importFrom(htmlwidgets,sizingPolicy)
