@@ -58,13 +58,7 @@ Install [{packer}](https://github.com/JohnCoene/packer) (see packer's [documenta
 Install nodes modules with:
 
 ```r
-packer::npm_install("proportions-chart", scope = "prod")
-```
-
-Update dependencies with:
-
-```r
-packer::npm_update()
+packer::npm_install()
 ```
 
 Modify `srcjs/widgets/bar.js`, then run:
