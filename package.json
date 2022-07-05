@@ -27,6 +27,6 @@
     "webpack-merge": "^5.4.0"
   },
   "dependencies": {
-    "proportions-chart": "^1.2.1"
+    "proportions-chart": "^1.2.2"
   }
 }

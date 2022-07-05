@@ -1,7 +1,7 @@
 Package: bar
 Title: Create Interactive Proportions Chart with the JavaScript 'proportions-chart' Library
 Description: Provides an 'htmlwidgets' interface to 'proportions-chart.js'. 
-Version: 0.0.0.9000
+Version: 0.0.0.9100
 Authors@R: 
     c(person(given = "Victor",
              family = "Perrier",

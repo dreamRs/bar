@@ -11,14 +11,19 @@ HTMLWidgets.widget({
   factory: function(el, width, height) {
 
     const barChart = ProportionsChart();
+    var bar;
 
     return {
 
       renderValue: function(x) {
+        
+        if (typeof bar == "undefined") {
+          bar = barChart(el)
+            .width(width)
+            .height(height);
+        }
 
-        barChart(el)
-          .width(width)
-          .height(height)
+        bar
           .data(x.data)
           .color(function(d) {
             return x.colors[d.name];
